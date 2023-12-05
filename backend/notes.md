@@ -25,9 +25,14 @@
 - Project vs app
 - views takes parameters and passes to templates. html dynamic to servers' reqmts.
 - GRADING DEMO
-- models: interface to SQL queries
+- models: interface to SQL queries  
+<img width="327" alt="image" src="https://github.com/kohinoor23/summer-of-code-2023/assets/61497490/4b8fac3c-130b-4417-a494-16dcb2c3039a">
+  
   - foreign key
-  - migrations
+  - migrations (still not clear how this works @todo)
+      - makemigrations: create SQL commands for defined models
+      - migrate: run the SQL commands
+        REMINDER: play a lot with the documentation
 
 
 
