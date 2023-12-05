@@ -20,7 +20,7 @@
   - Helps to maintain different versions if needed, less messy
   - python -m venv env_name
 
-## Django
+### Django
 - SETUP DJANGO USING POWERSHELL
 - Project vs app
 - views takes parameters and passes to templates. html dynamic to servers' reqmts.
@@ -35,6 +35,8 @@
         REMINDER: play a lot with the documentation
 
 
-
+> Devtools: Inspect
+- analyse resources downloaded, throttle the network, block resources
+- [For more info](https://developer.chrome.com/docs/devtools/)
 
  
