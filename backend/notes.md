@@ -1,3 +1,5 @@
+## Task 1A: The Network
+
 > [YT session by DevClub](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbjJUdHFvUVlCTU5YazNxS09PUVhUZGpOZk5oZ3xBQ3Jtc0tsQk94eGVYcDc0SU5sMUkzX0hsaEVPaGkwYkFzSkY0dmtyUXh1czNQZ3pJak1pTGtCemJKVXdoUGJZeXRtZGpaUEdSLVZneGk4S0QwX1NXQUFIckFjcFFEVXdkOHVudGw0d0w1RG13QmNiMkNDWHJCWQ&q=https%3A%2F%2Fdocs.google.com%2Fpresentation%2Fd%2Fe%2F2PACX-1vQbtDDGQonkIoGu68VrINL2s3sQcfiH5XVnk-iU26nk16DFBGsDabichsqhdtBvowPvpxaIbFLAV2h3%2Fpub%3Fslide%3Did.p&v=T4o1oxfz02w)
 ### Need of backend
 - Dynamic webpages use user info, cookies, and sessions to render data. Servers run programs taking parameters from clients.
@@ -14,7 +16,9 @@
 ### Networks:
   > Mozilla MDN is a good reference
   - cookies and sessions: client store user id, share to server to identify user, session cookie identifies anonymous users.
-  - auth. systems: username-password-CSRF sent to server, post auth server sends auth token to client for further communication by client also, read session hijacking
+  - auth. systems: username-password-CSRF sent to server, post auth server sends auth token to client for further communication by client also, read session hijacking.  
+  The client uses auth token in every request from now on, omitting repeated use of credentials.
+  - server stores user data during sessions. like session id, cart items, items clicked...
 
 ### VirtualEnv
   - Helps to maintain different versions if needed, less messy
@@ -40,3 +44,7 @@
 - [For more info](https://developer.chrome.com/docs/devtools/)
 
  
+ - BONUS: telnet/SSH establish connection to a remote server. use wget to send get requests to server using cmd, nc/curl for similar communication.   
+    JWTs are alternate method for authorization. They use public/private key pairs, usualy to connect two systems.
+
+## Task 1B : URL Shortener
