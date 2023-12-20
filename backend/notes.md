@@ -47,4 +47,38 @@
  - BONUS: telnet/SSH establish connection to a remote server. use wget to send get requests to server using cmd, nc/curl for similar communication.   
     JWTs are alternate method for authorization. They use public/private key pairs, usualy to connect two systems.
 
-## Task 1B : URL Shortener
+## Task 1B : URL Shortener  
+### Django Refresher
+- Learning Django again. Just cant remember it in one go.
+```powershell
+python -m venv env_name
+.\env_name\Scripts\activate
+```
+- all the databases stored in _db.sqlite3_
+- A basic flow: the user types a URL in the browser, and the client sends a HttpRequest to the server. The server takes that URL and maps to a view function. This function gives the HttpResponse, to be sent back to the client. HttpResponse is just a wrapper for the protocol formalities and the webpage.
+- templates folders should be added to TEMPLATES in settings.
+- define variables as {'va_name': source_var}, access as {{ va_name }}
+- For models, see [this](https://docs.djangoproject.com/en/5.0/topics/db/models/).  
+  - model ~ objects ~ tables ~ each instance a row in table
+  - when defining new model, makemigrations creates a verbose intermediate of table creation command
+  - The migrate command creates SQL commands and executes them.
+
+### Simple http.response
+```powershell 
+python -m http.server 8000
+```
+[YT Video](https://www.youtube.com/watch?v=DeFST8tvtuI)
+
+- The assignment is just a play with the path during GET/POST requests. 
+- GET request is like (on powershell)
+  ```powershell
+  curl http://localhost:8000/url
+  ```
+- POST request is like
+  ```powershell
+  Invoke-WebRequest -Uri http://localhost:8000/url -Method POST
+  ```
+- Usage of URL shortener:
+  - run the http server
+  - write a post request in cmd, with required url and shortcode
+  - use get request by typing the url in the browser. (curl isnt working for now)
