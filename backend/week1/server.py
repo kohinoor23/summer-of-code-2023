@@ -14,14 +14,26 @@ class DemoHandler(BaseHTTPRequestHandler):
 
         self.wfile.write(response_content.encode('utf-8'))
 
+class Destination:
+    def __init__(self, url):
+        self.url = url
+        self.num_calls = 0
+
 class URLShortener(BaseHTTPRequestHandler):
     def do_GET(self):
         path_split = self.path.split('/')
         shortcode = path_split[2]
 
         if shortcode in url_map:
+            dest = url_map[shortcode]
+
             self.send_response(302)
-            self.send_header('Location', url_map[shortcode])
+            self.send_header('Location', dest.url)
+            self.send_header('Content-type', 'text/html')
+            
+            #send the count of uses of shortcode
+            dest.num_calls += 1
+            self.send_header('Call-Count', str(f'shortcode calls = {dest.num_calls}'))
             self.end_headers()
         else:
             self.send_response(404)
@@ -34,12 +46,12 @@ class URLShortener(BaseHTTPRequestHandler):
     def do_POST(self):
         path_split = self.path.split('/')
         shortcode = path_split[2]
-        dest = '/'.join(path_split[3:])
+        dest_path = '/'.join(path_split[3:])
 
         self.send_response(201)
         self.end_headers()
 
-        url_map[shortcode] = dest
+        url_map[shortcode] = Destination(dest_path)
 
 if __name__ == '__main__':
     addr = ('localhost', 8000)
