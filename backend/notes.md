@@ -63,7 +63,7 @@ python -m venv env_name
   - when defining new model, makemigrations creates a verbose intermediate of table creation command
   - The migrate command creates SQL commands and executes them.
 
-### Simple http.response
+### Simple http.server
 ```powershell 
 python -m http.server 8000
 ```
@@ -82,3 +82,9 @@ python -m http.server 8000
   - run the http server
   - write a post request in cmd, with required url and shortcode
   - use get request by typing the url in the browser. (curl isnt working for now)
+  
+---
+
+## Task 2: Django
+- See notes in week 2, covers pretty much of the thinking while creating. Extensive use of copilot bot also.
+

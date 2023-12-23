@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <h1>FaujiMarket</h1>
+    <form method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Login</button>
+    </form>
+    <a href="{% url 'catalogue' %}">Login as guest</a> <br>
+    <a href="{% url 'signup' %}">Sign Up</a>
+</body>
+</html>
