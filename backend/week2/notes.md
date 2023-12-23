@@ -5,3 +5,10 @@ When the user accesses the empty URL, we check if the user is logged in, if yes,
 Updates: 
 - Now, the catalogue is available to all. So the catalogue page will have a login option if not logged in. If logged in, there will be a add product option as well. 
   - Home page : ~~signup/login~~ catalogue as guest
+
+
+- Looking at upcoming tasks, most of the functionality should be added in this week only, as they concern more about customisation and deployment. So the plan ahead.
+  - [ ]  Create user model
+  - [ ]  'Manage products' page
+  - [ ]  Look into buy/sell process
+  - [ ]  Bonus tasks
